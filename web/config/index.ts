@@ -249,3 +249,8 @@ export const VAR_REGEX = /\{\{(#[a-zA-Z0-9_-]{1,50}(\.[a-zA-Z_][a-zA-Z0-9_]{0,29
 export const TEXT_GENERATION_TIMEOUT_MS = 60000
 
 export const DISABLE_UPLOAD_IMAGE_AS_ICON = process.env.NEXT_PUBLIC_DISABLE_UPLOAD_IMAGE_AS_ICON === 'true'
+// 平台定制化配置
+export const PLATFORM_CUSTORM = {
+  open: true,
+  title: 'tongjiatech',
+}

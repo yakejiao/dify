@@ -178,4 +178,9 @@ pyrightconfig.json
 api/.vscode
 
 .idea/
+<<<<<<< HEAD
 .vscode
+=======
+
+web/yarn.lock
+>>>>>>> fee7e3d1d (update)

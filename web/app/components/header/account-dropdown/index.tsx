@@ -21,6 +21,7 @@ import { useModalContext } from '@/context/modal-context'
 import { LanguagesSupported } from '@/i18n/language'
 import { useProviderContext } from '@/context/provider-context'
 import { Plan } from '@/app/components/billing/type'
+import { PLATFORM_CUSTORM } from '@/config'
 
 export type IAppSelector = {
   isMobile: boolean
@@ -120,7 +121,7 @@ export default function AppSelector({ isMobile }: IAppSelector) {
                         <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />
                       </a>
                     </Menu.Item>}
-                    <Menu.Item>
+                    {!PLATFORM_CUSTORM.open && <Menu.Item>
                       <Link
                         className={classNames(itemClassName, 'group justify-between')}
                         href='https://github.com/langgenius/dify/discussions/categories/feedbacks'
@@ -128,8 +129,8 @@ export default function AppSelector({ isMobile }: IAppSelector) {
                         <div>{t('common.userProfile.communityFeedback')}</div>
                         <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />
                       </Link>
-                    </Menu.Item>
-                    <Menu.Item>
+                    </Menu.Item>}
+                    {!PLATFORM_CUSTORM.open && <Menu.Item>
                       <Link
                         className={classNames(itemClassName, 'group justify-between')}
                         href='https://discord.gg/5AEfbxcd9k'
@@ -137,8 +138,8 @@ export default function AppSelector({ isMobile }: IAppSelector) {
                         <div>{t('common.userProfile.community')}</div>
                         <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />
                       </Link>
-                    </Menu.Item>
-                    <Menu.Item>
+                    </Menu.Item>}
+                    {!PLATFORM_CUSTORM.open && <Menu.Item>
                       <Link
                         className={classNames(itemClassName, 'group justify-between')}
                         href={
@@ -148,16 +149,7 @@ export default function AppSelector({ isMobile }: IAppSelector) {
                         <div>{t('common.userProfile.helpCenter')}</div>
                         <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />
                       </Link>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <Link
-                        className={classNames(itemClassName, 'group justify-between')}
-                        href='https://roadmap.dify.ai'
-                        target='_blank' rel='noopener noreferrer'>
-                        <div>{t('common.userProfile.roadmap')}</div>
-                        <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />
-                      </Link>
-                    </Menu.Item>
+                    </Menu.Item>}
                     {
                       document?.body?.getAttribute('data-public-site-about') !== 'hide' && (
                         <Menu.Item>

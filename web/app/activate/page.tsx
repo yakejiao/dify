@@ -3,6 +3,7 @@ import Header from '../signin/_header'
 import style from '../signin/page.module.css'
 import ActivateForm from './activateForm'
 import cn from '@/utils/classnames'
+import { PLATFORM_CUSTORM } from '@/config'
 
 const Activate = () => {
   return (
@@ -22,7 +23,7 @@ const Activate = () => {
         <Header />
         <ActivateForm />
         <div className='px-8 py-6 text-sm font-normal text-gray-500'>
-          © {new Date().getFullYear()} Dify, Inc. All rights reserved.
+          © {new Date().getFullYear()} {PLATFORM_CUSTORM.title}, Inc. All rights reserved.
         </div>
       </div>
     </div>

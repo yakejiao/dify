@@ -7,7 +7,7 @@ import Header from './_header'
 import style from './page.module.css'
 import UserSSOForm from './userSSOForm'
 import cn from '@/utils/classnames'
-import { IS_CE_EDITION } from '@/config'
+import { IS_CE_EDITION, PLATFORM_CUSTORM } from '@/config'
 
 import type { SystemFeatures } from '@/types/feature'
 import { defaultSystemFeatures } from '@/types/feature'
@@ -75,7 +75,7 @@ gtag('config', 'AW-11217955271"');
             <>
               <Forms />
               <div className='px-8 py-6 text-sm font-normal text-gray-500'>
-                © {new Date().getFullYear()} LangGenius, Inc. All rights reserved.
+                © {new Date().getFullYear()} {PLATFORM_CUSTORM.title}, Inc. All rights reserved.
               </div>
             </>
           )}
