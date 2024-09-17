@@ -34,7 +34,7 @@ class LocalStorage(BaseStorage):
             filename = self.folder + filename
         else:
             filename = self.folder + "/" + filename
-
+        print(f"filename: {filename}")
         if not os.path.exists(filename):
             raise FileNotFoundError("File not found")
 
